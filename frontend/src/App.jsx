@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import AddTransactionPage from './pages/AddTransactionPage';
 
@@ -18,8 +19,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Public Route */}
+        {/* Public Routes */}
         <Route path="/" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         
         {/* Protected Routes */}
         <Route 

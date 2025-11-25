@@ -2,31 +2,35 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
-const LoginPage = () => {
+const RegisterPage = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     setError('');
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      // Sementara console.log dulu
+      console.log('Register Data:', { name, email, password });
+
+      const response = await fetch('http://localhost:5000/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ name, email, password }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Login failed');
+        throw new Error(data.message || 'Register failed');
       }
 
       // Simpan token ke localStorage
@@ -56,7 +60,7 @@ const LoginPage = () => {
           <h1 className="app-title">
             Saku<span className="highlight">Kurata</span>
           </h1>
-          <p className="app-subtitle">Kelola keuangan dengan mudah</p>
+          <p className="app-subtitle">Daftar akun baru</p>
         </div>
 
         {/* Error Message */}
@@ -67,8 +71,24 @@ const LoginPage = () => {
           </div>
         )}
 
-        {/* Login Form */}
-        <form onSubmit={handleLogin} className="login-form">
+        {/* Register Form */}
+        <form onSubmit={handleRegister} className="login-form">
+          {/* Name Input */}
+          <div className="form-group">
+            <label className="form-label">Nama</label>
+            <div className="input-wrapper">
+              <span className="input-icon">👤</span>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="form-input"
+                placeholder="masukkan nama"
+                required
+              />
+            </div>
+          </div>
+
           {/* Email Input */}
           <div className="form-group">
             <label className="form-label">Email</label>
@@ -101,7 +121,7 @@ const LoginPage = () => {
             </div>
           </div>
 
-          {/* Login Button */}
+          {/* Register Button */}
           <button
             type="submit"
             disabled={isLoading}
@@ -114,18 +134,18 @@ const LoginPage = () => {
               </>
             ) : (
               <>
-                <span className="button-icon">🔐</span>
-                Masuk
+                <span className="button-icon">✨</span>
+                Daftar
               </>
             )}
           </button>
         </form>
 
-        {/* Register Link */}
+        {/* Login Link */}
         <div className="register-link">
           <p>
-            Belum punya akun?{' '}
-            <a href="/register" className="link">Daftar sekarang</a>
+            Sudah punya akun?{' '}
+            <a href="/" className="link">Masuk</a>
           </p>
         </div>
       </div>
@@ -138,4 +158,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
