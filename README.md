@@ -1,9 +1,11 @@
 # SakuKurata
 Aplikasi Pencatat Keuangan & Arsip Struk Digital
 
+## Dibuat oleh
 Nama: Nisrina Bilqis
 NRP: 5027241054
 
+## Penjelasan
 "Dompet Rata? Tetap Tertata!"
 
 SakuKurata adalah aplikasi manajemen keuangan pribadi berbasis web yang dirancang khusus untuk mahasiswa. Berbeda dengan pencatat keuangan biasa, SakuKurata mewajibkan pengguna untuk mengunggah bukti struk/foto pada setiap pengeluaran, menciptakan kebiasaan transparansi dan akuntabilitas finansial.
