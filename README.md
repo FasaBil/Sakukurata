@@ -1,4 +1,8 @@
-🌸 SakuKurata - Aplikasi Pencatat Keuangan & Arsip Struk Digital
+# SakuKurata
+Aplikasi Pencatat Keuangan & Arsip Struk Digital
+
+Nama: Nisrina Bilqis
+NRP: 5027241054
 
 "Dompet Rata? Tetap Tertata!"
 
@@ -113,6 +117,7 @@ Buka browser di alamat yang muncul (biasanya http://localhost:5173)
 
 📂 Struktur Folder Proyek
 
+```
 SakuKurata/
 ├── backend/                # Server Side Logic
 │   ├── middleware/         # Auth Middleware
@@ -127,10 +132,7 @@ SakuKurata/
     │   ├── App.jsx         # Routing Configuration
     │   └── main.jsx        # Entry Point React
     └── package.json
-
+```
 
 👨‍💻 Author
 
-Nama: Nisrina Bilqis
-
-NRP: 5027241054
