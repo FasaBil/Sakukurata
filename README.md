@@ -1,9 +1,9 @@
-# SakuKurata
+# SakuKurata サククラタ
 ### Aplikasi Pencatat Keuangan & Arsip Struk Digital
 
-"Dompet Rata? Tetap Tertata!"
+"Pencegah SakuKU menjadi rata"
 
-SakuKurata adalah aplikasi manajemen keuangan pribadi berbasis web yang dirancang khusus untuk mahasiswa. Berbeda dengan pencatat keuangan biasa, SakuKurata mewajibkan pengguna untuk mengunggah bukti struk/foto pada setiap pengeluaran, menciptakan kebiasaan transparansi dan akuntabilitas finansial.
+SakuKurata bukan arti Bahasa Jepang dari tidak punya uang, SakuKurata adalah aplikasi manajemen keuangan pribadi berbasis web yang dirancang khusus untuk mahasiswa. Berbeda dengan pencatat keuangan biasa, SakuKurata mewajibkan pengguna untuk mengunggah bukti struk/foto pada setiap pengeluaran, menciptakan kebiasaan transparansi dan akuntabilitas finansial.
 
 ## Dibuat oleh
 
@@ -71,10 +71,8 @@ cd backend
 npm install
 ```
 
-Buat file `.env` dengan isi:
+### 3. Buat file `.env` dengan isi:
 
-### Buat file .env
-### Isi .env dengan:
 ```
 MONGO_URI=mongodb://127.0.0.1:27017/sakukurata_db
 
@@ -89,7 +87,7 @@ Jalankan server:
 npm run dev
 ```
 
-### 3. Setup Frontend
+### 4. Setup Frontend
 
 Buka terminal baru:
 
