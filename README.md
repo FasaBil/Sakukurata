@@ -77,7 +77,9 @@ Buat file `.env` dengan isi:
 ### Buat file .env
 ### Isi .env dengan:
 MONGO_URI=mongodb://127.0.0.1:27017/sakukurata_db
+
 JWT_SECRET=sakukurata_jwt_secret_key_change_this_in_production
+
 PORT=5000
 
 
