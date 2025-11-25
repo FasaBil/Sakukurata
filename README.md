@@ -90,9 +90,10 @@ mkdir uploads
 
 # Buat file .env
 # Isi .env dengan:
-# MONGO_URI=mongodb://127.0.0.1:27017/sakukurata_db
-# JWT_SECRET=rahasia123
-# PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/sakukurata_db
+JWT_SECRET=sakukurata_jwt_secret_key_change_this_in_production
+PORT=5000
+
 
 # Jalankan Server
 npm run dev
